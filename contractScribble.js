@@ -1,4 +1,4 @@
-var contractDeadHeadzNFT = new web3.eth.Contract(
+var contractScribble = new web3.eth.Contract(
 [
 	{
 		"anonymous": false,
