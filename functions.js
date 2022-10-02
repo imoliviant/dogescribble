@@ -1,5 +1,5 @@
 // Mint
-function mintSkibble() {
+function mintScribble() {
     var amount1 = $("#amount1").val();
     var content = "Sending transaction from: ";
     content += zombieMaster;
@@ -93,7 +93,7 @@ function stakeNFT() {
     
 function calculateReward() {
     var tokenId3 = $("#tokenId3").val();
-    var event = contractDeadHeadzNFTStake.methods.calculateTokens(tokenId3).call()
+    var event = contractScribbleStake.methods.calculateTokens(tokenId3).call()
         .then(function (result) {
     var content = "INVADERS amount: ";
             //alert(result/100000000);
@@ -107,7 +107,7 @@ function unstakeNFT() {
     var content = "Sending transaction from: ";
     content += zombieMaster;
     $("#lang8").html(content);
-    var event = contractDeadHeadzNFTStake.methods.unstake(tokenId4).send({ from: zombieMaster, value: 5000000000000000 })
+    var event = contractScribbleStake.methods.unstake(tokenId4).send({ from: zombieMaster, value: 5000000000000000 })
         .then(function (receipt) {
             console.log(receipt);
     var content = "Transaction sent! ";
@@ -118,7 +118,7 @@ function unstakeNFT() {
 };
 
 function balanceToken() {
-    var event = contractBlockchainInvaders.methods.balanceOf("0xf77DBC9d03428980db5EF78D5d9C3D6a55F29829").call()
+    var event = contractBlockchainInvaders.methods.balanceOf("stakecontract").call()
         .then(function (result) {
     var content = "INVADERS balance: ";
             //alert(result/100000000);
