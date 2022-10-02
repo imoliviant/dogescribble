@@ -66,7 +66,7 @@ function approveS() {
     var content = "Approving transaction from: ";
     content += zombieMaster;
     $("#lang5").html(content);
-    var event = contractScribble.methods.approve("0xf77DBC9d03428980db5EF78D5d9C3D6a55F29829", tokenId2).send({ from: zombieMaster })
+    var event = contractScribbleStake.methods.approve("0xf77DBC9d03428980db5EF78D5d9C3D6a55F29829", tokenId2).send({ from: zombieMaster })
         .then(function (receipt) {
             console.log(receipt);
     var content = "Approved!: ";
