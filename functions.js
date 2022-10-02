@@ -118,9 +118,9 @@ function unstakeNFT() {
 };
 
 function balanceToken() {
-    var event = contractBlockchainInvaders.methods.balanceOf("stakecontract").call()
+    var event = contractWDOGE.methods.balanceOf("stakecontract").call()
         .then(function (result) {
-    var content = "INVADERS balance: ";
+    var content = "WDOGE balance: ";
             //alert(result/100000000);
     content += JSON.stringify(result.toString()/1000000000000000000);
     $("#lang9").html(content);
@@ -129,7 +129,7 @@ function balanceToken() {
 
 function ownerToken() {
     var tokenId5 = $("#tokenId5").val();
-    var event = contractDeadHeadzNFTStake.methods.tokenOwnerOf(tokenId5).call()
+    var event = contractScribble.methods.tokenOwnerOf(tokenId5).call()
         .then(function (result) {
     var content = "Address: ";
             //alert(result);
