@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Skibbles</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="DEADHEADZ NFT">
+<meta name="web" content="">
+<link rel="icon" type="image/ico" sizes="32x32" href="img/favicon.ico">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3@1.8.0/dist/web3.min.js" integrity="sha256-1TLx50r3wQ52OlAm5jSfpTwbN9MJ51NysfLmsXmUPDk=" crossorigin="anonymous"></script>
+<style>
+body {font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif}
+.w3-row img {margin-bottom: -8px}
+body {background-color: black;}
+</style>
+</head>
+<body>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-content" style="max-width: 1024px;">
+
+    <!-- Header -->
+    <header class="w3-container w3-black w3-large w3-padding-24">
+      <h1 class="w3-center w3-xxxlarge">Skibbles</h1>
+    </header>
+
+    <p class="w3-center w3-black"><i>DEADHEADZ NFT is a satire collection of AI-generated works of art (text2image DALL-E mini image generation model)<br>
+      It is created as a side project. No promises<br><br>
+      You need a wallet (e.g. MetaMask) connected to <a href="https://docs.dogechain.dog">Dogechain</a> network <img src="img/dogechain.png" alt="Dogechain image" width="56"><br>
+      Reload the page if you are not connected or undefined</i>
+    </p>
+    <br>
+
+    <h1 class="w3-center w3-black w3-xxxlarge">MINT DEADHEADZ NFT</h1>
+    <br>
+    <div class="w3-full">
+      <img src="img/deadheadz1.png" style="width:100%">
+    </div>
+    <br><br>
+    <div class="w3-row">
+      <div class="container">
+        <input id="amount1" type="text" size="10" placeholder="amount"><br>
+        <button onclick="mintDeadHeadz()" class="button button1">Mint</button>
+        <p><i>Max amount: 5 DEADHEADZ at a time<br>
+          Cost: 5 WDOGE / 1 DEADHEADZ<br>
+          Max supply: 1111<br>
+          Reload the page if undefined</i>
+        </p>
+        <div id="lang1"></div>
+        <br><br>
+        <button onclick="supply()" class="button button1">Check current supply</button>
+        <p></p>
+        <div id="lang2"></div>
+        <br><br>
+      </div>
+    </div>
+
+    <h1 class="w3-center w3-black w3-xxxlarge">DEADHEADZ NFT Wallet</h1>
+    <br>
+    <div class="w3-row">
+      <div class="w3-center w3-black">
+        <button onclick="wallet()" class="button button1">View your Scribbles</button>
+        <p></p>
+        <div id="lang3"></div>
+        <br><br>
+        <input id="address1" type="text" size="40" placeholder="address"><br>
+        <input id="tokenId1" type="text" size="10" placeholder="tokenId"><br>
+        <button onclick="sendNFT()" class="button button1">Send</button>
+        <p><i>Send DEADHEADZ NFT to somebody</i></p>
+        <div id="lang4"></div>
+        <br><br>
+      </div>
+    </div>
+
+    <h1 class="w3-center w3-black w3-xxxlarge">DEADHEADZ NFT Stake</h1>
+    <p class="w3-center w3-black"><i>Staking reward is <a href="https://invaders.doge.wf">BLOCKCHAIN INVADERS</a> token<br>
+      500 INVADERS per day for 1 DEADHEADZ NFT staked<br>
+      0.005 WDOGE fee for staking and unstaking<br><br>
+      Reload the page if undefined</i>
+    </p>
+    <br>
+    <div class="w3-row">
+      <div class="w3-center w3-black">
+        <input id="tokenId2" type="text" size="10" placeholder="tokenId e.g. 1"><br>
+        <button onclick="approveS()" class="button button1">Approve DEADHEADZ NFT</button>
+        <br>
+        <p><i>tokenId to approve must be the same as tokenId to stake</i></p>
+        <div id="lang5"></div>
+        <br>
+        <input type="text" id="tokenId2" size="10" placeholder="tokenId e.g. 1"><br>
+        <button onclick="stakeNFT()" class="button button1">Stake DEADHEADZ NFT</button>
+        <br>
+        <p><i>tokenId to stake must be the same as tokenId to approve<br>
+          Do not forget your tokenId</i></p>
+        <div id="lang6"></div>
+        <br>
+        <input type="text" id="tokenId3" size="10" placeholder="tokenId e.g. 1"><br>
+        <button onclick="calculateReward()" class="button button1">Check reward</button>
+        <p><i>Check current reward amount</i></p>
+        <div id="lang7"></div>
+        <br>
+        <p></p>
+        <input type="text" id="tokenId4" size="10" placeholder="tokenId e.g. 1"><br>
+        <button onclick="unstakeNFT()" class="button button1">Unstake DEADHEADZ NFT with reward</button>
+        <br>
+        <p></p>
+        <div id="lang8"></div>
+        <br>
+        <button onclick="balanceToken()" class="button button1">Reward token balance</button>
+        <p></p>
+        <div id="lang9"></div>
+        <br>
+        <input type="text" id="tokenId5" size="10" placeholder="tokenId e.g. 1"><br>
+        <button onclick="ownerToken()" class="button button1">Owner of NFT tokenId staked</button>
+        <p></p>
+        <div id="lang10"></div>
+        <br><br>
+      </div>
+    </div>
+
+    <h1 class="w3-center w3-black w3-xxxlarge">DEADHEADZ NFT Market</h1>
+    <p class="w3-center w3-black"><i>coming soon</i><br><br>
+      <a href="https://oasis-nft.dog/collection/0x0398C92971E98f49b84Fa5eDe6Bb102Ec113f7E5">Oasis NFT Marketplace</a> <img src="img/oasis.png" alt="Oasis" width="56"><br><br>
+    </p>
+    <br><br>
+  </div>
+
+  <footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+    <p>DEADHEADZ NFT contract (verified):<br><a href="https://explorer.dogechain.dog/address/0x0398C92971E98f49b84Fa5eDe6Bb102Ec113f7E5/contracts">0x0398C92971E98f49b84Fa5eDe6Bb102Ec113f7E5</a><br>
+      <a href="https://explorer.dogmoney.money/address/0x0398C92971E98f49b84Fa5eDe6Bb102Ec113f7E5/contracts">0x0398C92971E98f49b84Fa5eDe6Bb102Ec113f7E5</a>
+    </p>
+    <p>DEADHEADZ NFT Stake contract (verified):<br><a href="https://explorer.dogechain.dog/address/0xe2Db77D6D0bF020a798CaF82A87B4073603533ac/contracts">0xe2Db77D6D0bF020a798CaF82A87B4073603533ac</a><br>
+      <a href="https://explorer.dogmoney.money/address/0xe2Db77D6D0bF020a798CaF82A87B4073603533ac/contracts">0xe2Db77D6D0bF020a798CaF82A87B4073603533ac</a>
+    </p>
+    <br>
+    <p>RENDERAI NFT <a href="https://renderai.art">Collection</a> <img src="img/renderai.png" alt="RENDERAI image" width="56"></p>
+    <p><a href="https://t.me/mazetokens"><img src="img/telegram.png" alt="Telegram" width="32"></a> <a href="https://github.com/mazetoken/contracts"><img src="img/github.png" alt="Github" width="32"></a>
+    </p>
+    <br>
+    <p><a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  </footer> 
+
+  <script>
+    web3 = new Web3(window.ethereum);
+    ethereum.request({ method: 'eth_requestAccounts' });
+    var zombieMaster;
+    const getAccount = async () => {
+    try {
+    const myAccounts = await web3.eth.getAccounts();
+    zombieMaster = myAccounts[0];
+    console.log("Master account" + zombieMaster);
+    return myAccounts[0];
+    } catch (err) {
+          console.log(err);
+    }
+    }
+    getAccount();
+    web3.eth.defaultAccount = web3.eth.accounts[0];
+  </script>
+
+  <script src="contractDeadHeadzNFT.js"></script>
+  <script src="contractDeadHeadzNFTStake.js"></script>
+  <script src="contractBlockchainInvaders.js"></script>
+  <script src="functions.js"></script>
+
+</body>
+</html>
