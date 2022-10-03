@@ -28,15 +28,15 @@ function supply() {
 // Wallet
 function wallet() {
     var content = "";
-        var event = contractScribble.methods.balanceOf(zombieMaster).call({ from: zombieMaster })
+        var event = contractDoodle.methods.balanceOf(zombieMaster).call({ from: zombieMaster })
         .then(function (result) {
     balance = result;
     for(var i = 0; i < balance; i++){
-    var event = contractScribble.methods.tokenOfOwnerByIndex(zombieMaster, i).call({ from: zombieMaster })
+    var event = contractDoodle.methods.tokenOfOwnerByIndex(zombieMaster, i).call({ from: zombieMaster })
         .then(function (result) {
-    var event = contractScribble.methods.tokenURI(Number(result)).call()
+    var event = contractDoodle.methods.tokenURI(Number(result)).call()
         .then(function (result1) {
-    content += "<img src=https://ipfs.io/ipfs//QmQ7b3DrPZVSHxkWEok6ZkPnz1veKPDGsm8msGUUoSW17j/"+result+".png width=256 height=256>" + " Id: " + result;
+    content += "<img src=https://ipfs.io/ipfs/QmbZznsg8JgCWLT5urCtZ36aQUXUiGctMJWkQf891S4ZfQ/"+result+".png width=64 height=64>" + " Id: " + result;
     $("#lang3").html(content);
     });
     });
