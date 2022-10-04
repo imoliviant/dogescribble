@@ -44,6 +44,25 @@ function wallet() {
     });
 };
 
+// doodle wallet
+function doodleWallet() {
+    var content = "";
+        var event = contractDoodle.methods.balanceOf(scribbleChef).call({ from: scribbleChef })
+        .then(function (result) {
+    balance = result;
+    for(var i = 0; i < balance; i++){
+    var event = contractDoodle.methods.tokenOfOwnerByIndex(scribbleChef, i).call({ from: scribbleChef })
+        .then(function (result) {
+    var event = contractDoodle.methods.tokenURI(Number(result)).call()
+        .then(function (result1) {
+    content += "<img src=https://ipfs.io/ipfs/QmbZznsg8JgCWLT5urCtZ36aQUXUiGctMJWkQf891S4ZfQ/"+result+".png width=80 height=80>" + "<br><br>Id: " + result;
+    $("#lang10").html(content);
+    });
+    });
+    };
+    });
+};
+
 function sendNFT() {
     var address1 = $("#address1").val();
     var tokenId1 = $("#tokenId1").val();
