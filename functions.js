@@ -63,22 +63,6 @@ function doodleWallet() {
     });
 };
 
-function sendNFT() {
-    var address1 = $("#address1").val();
-    var tokenId1 = $("#tokenId1").val();
-    var content = "Sending transaction from: ";
-    content += scribbleChef;
-    $("#lang4").html(content);
-    var event = contractScribble.methods.transferFrom(scribbleChef, address1, tokenId1).send({ from: scribbleChef })
-        .then(function (receipt) {
-            console.log(receipt);
-    var content = "Transaction sent!: ";
-            //alert("Done!");
-    content += JSON.stringify(receipt.transactionHash);
-    $("#lang4").html(content);
-        });;
-};
-
 // Stake Scribble NFT
 function approveS() {
     var tokenId2 = $("#tokenId2").val();
