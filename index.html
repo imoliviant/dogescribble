@@ -13,6 +13,129 @@
 </head>
 <body>
 
+    <!-----------Ratings---------------->
+    <section id="ratings">
+        <!--------Headings----------->
+        <div class="ratings-headings">
+            <a href="" target="_blank">
+                <h1 class="headings">
+                    <span class="text-wrapper">
+                        <span class="letters"></span>
+                    </span>
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+                    <script src="index.js"></script>
+                </h1>
+            </a>
+        </div>
+
+        <!-----ratings-box-container----->
+        <div class="ratings-box-container">
+            <!---- BOX 1 ---->
+            <div class="ratings-box">
+                <!---- TOP ---->
+                <div class="box-top">
+                    <!---- PROFILE ---->
+                    <div class="profile">
+                        <!---- IMG ---->
+                        <div class="profile-img">
+                            <img src="imgs/scribble.png">
+                        </div>
+                        <!---- NAME & USERNAME ---->
+                        <div class="name-user">
+                            <strong>Scribbles Mint</strong>
+                            <span>@dogescribbles</span>
+                        </div>
+                    </div>
+                    <!---- REVIEWS ---->
+                    <div class="reviews">
+                        <a href=""><i class='bx bxl-chrome'></i></a>
+                        <a href="https://t.me/dogescribbles" target="_blank"><i class='bx bxl-telegram'></i></a>
+                        <a href="#"><i class='bx bx-line-chart'></i></a>
+                    </div>
+                </div>
+                <!---- COMMENTS ---->
+                <div class="special-comment">
+                    <p>Scribbles:<br>Mint Price- 25 DOGE<br>Total Supply- 1,100<br>You Can Mint- 5 Scribbles at a time
+                    </p><br>
+                    <input id="amount1" type="number" size="10" placeholder="amount" min="1"><br>
+                    <button onclick="mintScribble()" class="button button1">Mint</button><br><br>
+                    <div id="lang1"></div>
+                    <button onclick="supply()" class="button button1">Check current supply</button>
+                    <p></p>
+                    <div id="lang2"></div>
+                </div>
+            </div>
+        </div>
+        <!---- BOX 2 ---->
+        <div class="ratings-box">
+            <!---- TOP ---->
+            <div class="box-top">
+                <!---- PROFILE ---->
+                <div class="profile">
+                    <!---- IMG ---->
+                    <div class="profile-img">
+                        <img src="imgs/scribble.png">
+                    </div>
+                    <!---- NAME & USERNAME ---->
+                    <div class="name-user">
+                        <strong>Scribble Wallet</strong>
+                        <span>@dogescribbles</span>
+                    </div>
+                </div>
+                <!---- REVIEWS ---->
+                <div class="reviews">
+                    <a href=""><i class='bx bxl-chrome'></i></a>
+                    <a href="https://t.me/dogescribbles" target="_blank"><i class='bx bxl-telegram'></i></a>
+                </div>
+            </div>
+            <!---- COMMENTS ---->
+            <div class="special-comment">
+                <p>You can view your scribble nfts as well as Check the current supply minted.</p><br>
+                <form action="file:///C:/Users/ASUS/OneDrive/Desktop/sgram/scribble.html" target="_blank">
+                    <button type="submit" class="button button1">View your Scribbles.</button>
+                </form>
+                <p></p>
+                <div id="lang3"></div>
+                <br><br>
+            </div>
+        </div>
+        <!---- BOX 3 ---->
+        <div class="ratings-box">
+            <!---- TOP ---->
+            <div class="box-top">
+                <!---- PROFILE ---->
+                <div class="profile">
+                    <!---- IMG ---->
+                    <div class="profile-img">
+                        <img src="imgs/doodlestake.png">
+                    </div>
+                    <!---- NAME & USERNAME ---->
+                    <div class="name-user">
+                        <strong>Doodles Staking</strong>
+                        <span>@dogescribbles</span>
+                    </div>
+                </div>
+                <!---- REVIEWS ---->
+                <div class="reviews">
+                    <a href=""><i class='bx bxl-chrome'></i></a>
+                    <a href="https://t.me/dogescribbles" target="_blank"><i class='bx bxl-telegram'></i></a>
+                </div>
+            </div>
+            <!---- COMMENTS ---->
+            <div class="special-comment">
+                <hr style="border: dotted 1px">
+                <p>Staking Coming Soon!:).</p>
+                <hr style="border: dotted 1px;"><br><br>
+                <p>You can view your doodles nfts, before staking them.</p><br>
+                <button onclick="doodleWallet()" class="button button1">View your Doodles.</button>
+                <p></p>
+                <div id="lang10"></div>
+                <br><br>
+            </div>
+        </div>
+    </section>
+    
 <script>
     web3 = new Web3(window.ethereum);
     ethereum.request({ method: 'eth_requestAccounts' });
