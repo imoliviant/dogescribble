@@ -13,5 +13,25 @@
 
         <script src="functions.js"></script>
         <script src="contractScribble.js"></script>
+        <script>
+    web3 = new Web3(window.ethereum);
+    ethereum.request({ method: 'eth_requestAccounts' });
+    var scribbleChef;
+    const getAccount = async () => {
+    try {
+    //const myAccounts = await web3.eth.getAccounts();
+    const myAccounts = await ethereum.request({ method: 'eth_accounts' });
+    scribbleChef = myAccounts[0];
+    console.log("Master account" + scribbleChef);
+    return myAccounts[0];
+    } catch (err) {
+          console.log(err);
+    }
+    }
+    //getAccount();
+    //web3.eth.defaultAccount = web3.eth.accounts[0];
+    getAccount();
+    ethereum.request({ method: 'eth_accounts' }).defaultAccount = ethereum.request({ method: 'eth_accounts' }).accounts[0];
+  </script>
     </body>
 </html>
