@@ -9,123 +9,212 @@
 <link rel="icon" type="image/ico" sizes="32x32" href="img/favicon.ico">
 <script src="https://cdn.jsdelivr.net/npm/web3@1.8.0/dist/web3.min.js" integrity="sha256-1TLx50r3wQ52OlAm5jSfpTwbN9MJ51NysfLmsXmUPDk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  
+<style>
+  * {
+  margin: 0px;
+  padding: 0px;
+  font-family: Monospace;
+  box-sizing: border-box;
+}
+body{
+  background: linear-gradient(60deg, aqua, yellow) no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+#ratings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.ratings-heading {
+  letter-spacing: 1px;
+  margin: 30px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratings-heading h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  background-color: #202020;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.ratings-heading span {
+  font-size: 1.3rem;
+  color: #252525;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ratings-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.special-ratings-box {
+  width: 500px;
+  box-shadow: 2px 2px 30px black;
+  background: linear-gradient(45deg, yellow, lightblue);
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.special-ratings-box:hover {
+  background: linear-gradient(45deg, lightblue, yellow);
+}
+
+.ratings-box {
+  width: 500px;
+  box-shadow: 2px 2px 30px grey;
+  background: linear-gradient(45deg, yellow, aqua);
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.ratings-box:hover {
+  box-shadow: 2px 2px 30px black;
+  border-radius: 10px;
+  background: linear-gradient(0deg, aqua, yellow);
+}
+
+img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.name-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-user strong {
+  color: #3d3d3d;
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
+}
+
+.name-user span {
+  color: #979797;
+  font-size: 1.5rem;
+}
+
+.reviews {
+  color: #f9d71c;
+}
+
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sup-comment {
+  font-size: 1.8rem;
+  color: #4b4b4b;
+}
+
+.special-comment {
+  font-size: 1.8rem;
+  color: black;
+  font-style: italic;
+  align-self: center;
+}
+input{
+  font-size: 1.5rem;
+  text-align: center;
+}
+button{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+i {
+  color: black;
+}
+
+i:hover {
+  color: lightslategrey;
+}
+
+.headings {
+  position: relative;
+  font-weight: 200;
+  font-size: 2.1em;
+}
+
+.headings .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.headings .letters {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+button{
+  background: linear-gradient(45deg, aqua, yellow);
+  box-shadow: 0px 1px 0px black;
+  font-style: bold;
+  font-size: 1.5rem;
+}
+button:hover{
+  background: linear-gradient(0deg, yellow, aqua);
+  box-shadow: 0px 1px 0px white;
+  font-size: 2rem;
+  font-style: italic;
+}
+</style>
 </head>
 <body>
-
-  <!-- !PAGE CONTENT! -->
-  <div class="w3-content" style="max-width: 1024px;">
-
-    <!-- Header -->
-    <header class="w3-container w3-black w3-large w3-padding-24">
-      <h1 class="w3-center w3-xxxlarge">DEADHEADZ NFT</h1>
-    </header>
-
-    <p class="w3-center w3-black"><i>DEADHEADZ NFT is a satire collection of AI-generated works of art (text2image DALL-E mini image generation model)<br>
-      It is created as a side project. No promises<br><br>
-      You need a wallet (e.g. MetaMask) connected to <a href="https://docs.dogechain.dog">Dogechain</a> network <img src="img/dogechain.png" alt="Dogechain image" width="56"><br>
-      Reload the page if you are not connected or undefined</i>
-    </p>
-    <br>
-
-    <h1 class="w3-center w3-black w3-xxxlarge">MINT DEADHEADZ NFT</h1>
-    <br>
-    <div class="w3-full">
-      <img src="img/deadheadz1.png" style="width:100%">
-    </div>
-    <br><br>
-    <div class="w3-row">
-      <div class="w3-center w3-black">
-        <input id="amount1" type="text" size="10" placeholder="amount"><br>
-        <button onclick="mintDeadHeadz()" class="button button1">Mint</button>
-        <p><i>Max amount: 5 DEADHEADZ at a time<br>
-          Cost: 5 WDOGE / 1 DEADHEADZ<br>
-          Max supply: 1111</i>
-        </p>
-        <div id="lang1"></div>
-        <br><br>
-        <button onclick="supply()" class="button button1">Check current supply</button>
-        <p></p>
-        <div id="lang2"></div>
-        <br><br>
-      </div>
-    </div>
-
-    <h1 class="w3-center w3-black w3-xxxlarge">DEADHEADZ NFT Wallet</h1>
-    <br>
-    <div class="w3-row">
-      <div class="w3-center w3-black">
-        <button onclick="wallet()" class="button button1">View your DEADHEADZ NFTs</button>
-        <p><i>Import to MetaMask:<br>
-          Address: 0x0398C92971E98f49b84Fa5eDe6Bb102Ec113f7E5<br>
-          Symbol: DEADHEADZ<br>
-          Decimals: 0<br><br>
-          Wait a few seconds<br>
-          Reload if NFTs are not visible
-        </i></p>
-        <p></p>
-        <div id="lang3"></div>
-        <br><br>
-        <input id="address1" type="text" size="40" placeholder="address"><br>
-        <input id="tokenId1" type="text" size="10" placeholder="tokenId"><br>
-        <button onclick="sendNFT()" class="button button1">Send</button>
-        <p><i>Send DEADHEADZ NFT to somebody</i></p>
-        <div id="lang4"></div>
-        <br><br>
-      </div>
-    </div>
-
-    <hr>
-
-    <h1 class="w3-center w3-black w3-xxxlarge">DEADHEADZ NFT Stake</h1>
-    <p class="w3-center w3-black"><i>Staking reward is <a href="https://invaders.doge.wf">BLOCKCHAIN INVADERS</a> token -<br>
-      0xb58904a0328abACf05b288E51a578471A8317B70<br><br>
-      500 INVADERS per day for 1 DEADHEADZ NFT staked<br>
-      Reward is continuously compounding<br>
-      0.005 WDOGE fee for staking and unstaking</i>
-    </p>
-    <br>
-    <div class="w3-row">
-      <div class="w3-center w3-black">
-        <input id="tokenId2" type="text" size="10" placeholder="tokenId e.g. 1"><br>
-        <button onclick="approveDH()" class="button button1">Approve DEADHEADZ NFT</button>
-        <br>
-        <p><i>tokenId to approve must be the same as tokenId to stake</i></p>
-        <button onclick="approveAll()" class="button button1">Approve All DEADHEADZ NFT</button>
-        <p></p>
-        <div id="lang5"></div>
-        <div id="lang6"></div>
-        <br><br>
-        <input type="text" id="tokenIdA" size="10" placeholder="tokenId e.g. 1"><br>
-        <button onclick="stakeNFT()" class="button button1">Stake DEADHEADZ NFT</button>
-        <br>
-        <p><i>tokenId to stake must be the same as tokenId to approve<br>
-          Do not forget your NFT tokenId</i></p>
-        <div id="lang7"></div>
-        <br>
-        <input type="text" id="tokenId3" size="10" placeholder="tokenId e.g. 1"><br>
-        <button onclick="calculateReward()" class="button button1">Check reward</button>
-        <p><i>Check current reward amount</i></p>
-        <div id="lang8"></div>
-        <br>
-        <p></p>
-        <input type="text" id="tokenId4" size="10" placeholder="tokenId e.g. 1"><br>
-        <button onclick="unstakeNFT()" class="button button1">Unstake DEADHEADZ NFT with reward</button>
-        <br>
-        <p><i>You need to unstake to get a reward</i></p>
-        <div id="lang9"></div>
-        <br>
-        <button onclick="balanceToken()" class="button button1">Reward token balance</button>
-        <p></p>
-        <div id="lang10"></div>
-        <br>
-        <input type="text" id="tokenId5" size="10" placeholder="tokenId e.g. 1"><br>
-        <button onclick="ownerToken()" class="button button1">Owner of the NFT staked</button>
-        <p></p>
-        <div id="lang11"></div>
-        <br><br>
-      </div>
-    </div>
-  </div>
 
 <script>
     web3 = new Web3(window.ethereum);
