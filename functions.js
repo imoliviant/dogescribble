@@ -36,7 +36,7 @@ function wallet() {
         .then(function (result) {
     var event = contractScribble.methods.tokenURI(Number(result)).call()
         .then(function (result1) {
-    content += "<img src=https://ipfs.io/ipfs//QmbZznsg8JgCWLT5urCtZ36aQUXUiGctMJWkQf891S4ZfQ/"+result+".png width=64 height=64>" + "<br><br>Id: " + result;
+    content += "<img src=https://ipfs.io/ipfs//QmPJjAbNWsMG9SERC7LvcajVekSMr9JGDddfWatPoENUF6/"+result+".png width=64 height=64>" + "<br><br>Id: " + result;
     $("#lang3").html(content);
     });
     });
