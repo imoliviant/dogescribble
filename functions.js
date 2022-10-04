@@ -146,6 +146,15 @@ function balanceToken() {
         });;
 };
 
+function stakedDoodles() {
+    var event = contractDoodleStake.methods.balanceOf("stakecontract").call()
+        .then(function (result) {
+    var content = "Doodles Staked balance: ";
+    content += JSON.stringify(result.toString());
+    $("#lang11").html(content);
+        });;
+};
+
 function ownerToken() {
     var tokenId5 = $("#tokenId5").val();
     var event = contractScribble.methods.tokenOwnerOf(tokenId5).call()
