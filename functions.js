@@ -28,13 +28,13 @@ function supply() {
 // Wallet
 function wallet() {
     var content = "";
-        var event = contractDoodle.methods.balanceOf(scribbleChef).call({ from: scribbleChef })
+        var event = contractScribble.methods.balanceOf(scribbleChef).call({ from: scribbleChef })
         .then(function (result) {
     balance = result;
     for(var i = 0; i < balance; i++){
-    var event = contractDoodle.methods.tokenOfOwnerByIndex(scribbleChef, i).call({ from: scribbleChef })
+    var event = contractScribble.methods.tokenOfOwnerByIndex(scribbleChef, i).call({ from: scribbleChef })
         .then(function (result) {
-    var event = contractDoodle.methods.tokenURI(Number(result)).call()
+    var event = contractScribble.methods.tokenURI(Number(result)).call()
         .then(function (result1) {
     content += "<img src=https://ipfs.io/ipfs//QmbZznsg8JgCWLT5urCtZ36aQUXUiGctMJWkQf891S4ZfQ/"+result+".png width=64 height=64>" + "<br><br>Id: " + result;
     $("#lang3").html(content);
