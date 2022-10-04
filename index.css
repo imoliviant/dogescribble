@@ -199,3 +199,8 @@ button:hover{
   font-size: 2rem;
   font-style: italic;
 }
+#lang1 {
+ font-size: 0.69rem;
+ font-family: monospace;
+ font-style: italic;
+}
