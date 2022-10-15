@@ -1,7 +1,7 @@
 {
     "name": "Scribble",
     "description": "Scribbles on doge: we say them doodles.:)",
-    "image": "",
+    "image": "https://dogescribble.netlify.app/scribbles/nfts/24.png",
     "attribute": [
         {
             "trait_type": "colours",
