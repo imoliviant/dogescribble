@@ -1,0 +1,31 @@
+{
+    "name": "Scribble",
+    "description": "Scribbles on doge: we say them doodles.:)",
+    "image": "",
+    "attribute": [
+        {
+            "trait_type": "colours",
+            "value": "simple"
+        },
+        {
+            "trait_type": "hat",
+            "value": "chef"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "simple"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "chewing"
+        },
+        {
+            "trait_type": "t-shirt",
+            "value": "spotted"
+        },
+        {
+            "trait_type": "extra",
+            "value": "chewing-gum"
+        }
+    ]
+}

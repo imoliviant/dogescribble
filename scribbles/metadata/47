@@ -1,0 +1,27 @@
+{
+    "name": "Scribble",
+    "description": "Scribbles on doge: we say them doodles.:)",
+    "image": "",
+    "attribute": [
+        {
+            "trait_type": "colours",
+            "value": "simple"
+        },
+        {
+            "trait_type": "hat",
+            "value": "ox horns"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "goggles"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "umm"
+        },
+        {
+            "trait_type": "t-shirt",
+            "value": "scrooby"
+        }
+    ]
+}
