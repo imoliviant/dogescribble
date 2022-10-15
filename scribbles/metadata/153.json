@@ -1,7 +1,7 @@
 {
     "name": "Scribble",
     "description": "Scribbles on doge: we say them doodles.:)",
-    "image": "https://dogescribble.netlify.app/scribbles/nfts/151.png",
+    "image": "https://dogescribble.netlify.app/scribbles/nfts/153.png",
     "attribute": [
         {
             "trait_type": "colours",
@@ -9,7 +9,7 @@
         },
         {
             "trait_type": "hat",
-            "value": "chef"
+            "value": "religious-cap"
         },
         {
             "trait_type": "eyes",
@@ -21,7 +21,7 @@
         },
         {
             "trait_type": "t-shirt",
-            "value": "school shirt"
+            "value": "warm"
         }
     ]
 }
