@@ -1,0 +1,27 @@
+{
+    "name": "Scribble",
+    "description": "Scribbles on doge: we say them doodles.:)",
+    "image": "https://dogescribble.netlify.app/scribbles/nfts/143.png",
+    "attribute": [
+        {
+            "trait_type": "colours",
+            "value": "simole"
+        },
+        {
+            "trait_type": "hat",
+            "value": "joysticks"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "goggle"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "rabbit"
+        },
+        {
+            "trait_type": "t-shirt",
+            "value": "skin"
+        }
+    ]
+}
