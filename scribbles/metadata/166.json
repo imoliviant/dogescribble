@@ -1,0 +1,27 @@
+{
+    "name": "Scribble",
+    "description": "Scribbles on doge: we say them doodles.:)",
+    "image": "https://dogescribble.netlify.app/scribbles/nfts/166.png",
+    "attribute": [
+        {
+            "trait_type": "colours",
+            "value": "simple"
+        },
+        {
+            "trait_type": "hat",
+            "value": "headgear"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "spiral"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "amazed"
+        },
+        {
+            "trait_type": "t-shirt",
+            "value": "manager-outfit"
+        }
+    ]
+}
