@@ -162,13 +162,20 @@
   <script src="contractWDOGE.js"></script>
   <script src="contractScribble.js"></script>
   <script>
-     fetch("https://oasis-nft.dog")
+     const xhr = new XMLHttpRequest();
 
-.then(response => {
+const url = "https://oasis-nft.dog/";
 
-   console.log(response);
+xhr.open("GET", url);
 
-})
+xhr.onreadystatechange = someHandler;
+
+xhr.send();
+
+
+   
+
+
   </script>
 
 </body>
