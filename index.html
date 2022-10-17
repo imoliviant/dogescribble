@@ -57,14 +57,14 @@
                 </div>
                 <!---- COMMENTS ---->
                 <div class="special-comment">
-                    <p>Scribbles:<br>Mint Price- 25 DOGE<br>Total Supply- 1,100<br>You Can Mint- 5 Scribbles at a time
+                    <p>Scribbles:<br>Mint Price- 25 DOGE<br>Total Supply- 800<br>You Can Mint- 10 Scribbles at a time
                     </p><br>
                     <input id="amount1" type="number" size="10" placeholder="amount" min="1"><br>
-                    <button onclick="mintScribblePaused()" class="button button1">Mint</button><br><br>
+                    <button onclick="mintScribble()" class="button button1">Mint</button><br><br>
                     <div id="lang1"></div>
                     <button onclick="supply()" class="button button1">Check current supply</button>
                     <p></p>
-                    <div id="lang2"></div> / 1100<br>
+                    <div id="lang2"></div> / 800<br>
                 </div>
             </div>
         </div>
@@ -131,7 +131,25 @@
                 <button onclick="doodleWallet()" class="button button1">View your Doodles.</button>
                 <p></p>
                 <div id="lang10"></div>
-                <br><br>
+                <br><br><br>
+                <hr style="border: dotted 1px;"><br>
+                <table class="countdownContainer">
+                    <tr class="info">
+                        <td colspan="4">Scribbles Be Back in</td>
+                    </tr>
+                    <tr class="info">
+                        <td id="days">7</td>
+                        <td id="hours">6</td>
+                        <td id="minutes">30</td>
+                        <td id="seconds">40</td>
+                    </tr>
+                    <tr>
+                        <td>Days</td>
+                        <td>Hours</td>
+                        <td>Minutes</td>
+                        <td>Seconds</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </section>
@@ -161,6 +179,40 @@
   <script src="contractDoodle.js"></script>
   <script src="contractWDOGE.js"></script>
   <script src="contractScribble.js"></script>
+  <script type="text/javascript">
+      function countdown(){
+          var now = new Date();
+          var eventDate = new Date(2022, 9, 24);
+          var currentTime = now.getTime();
+          var eventTime = eventDate.getTime();
+          var remTime = eventTime - currentTime;
+          
+          var s = Math.floor(remTime / 1000);
+          var m = Math.floor(s / 60);
+          var h = Math.floor(m / 60);
+          var d = Math.floor(h / 24);
+          
+          h %= 24;
+          m %= 60;
+          s %= 60;
+          
+          h = (h < 10) ? "0" + h : h;
+          m = (m < 10) ? "0" + m : m;
+          s = (s < 10) ? "0" + s : s;
+          
+          document.getElementById("days").textContent = d;
+          document.getElementById("days").innerText = d;
+          
+          document.getElementById("hours").textContent = h;
+          document.getElementById("minutes").textContent = m;
+          document.getElementById("seconds").textContent = s;
+          
+          setTimeout(countdown, 1000);
+      }
+      
+      countdown();
+  </script>
 
 </body>
 </html>
+
