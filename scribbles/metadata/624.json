@@ -1,0 +1,27 @@
+{
+    "name": "Scribble",
+    "description": "Scribbles on doge: we say them doodles.:)",
+    "image": "https://bafybeiaolwiidonkykyqaaqsrvieiareu7fuhmt3a72xvuogpatqpvrd2u.ipfs.4everland.io/624.png",
+    "attribute": [
+        {
+            "trait_type": "colours",
+            "value": "gradient"
+        },
+        {
+            "trait_type": "hat",
+            "value": "hair"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "simple"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "happy"
+        },
+        {
+            "trait_type": "t-shirt",
+            "value": "lawyer's wear"
+        }
+    ]
+}

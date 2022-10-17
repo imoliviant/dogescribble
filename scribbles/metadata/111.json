@@ -1,7 +1,7 @@
 {
     "name": "Scribble",
     "description": "Scribbles on doge: we say them doodles.:)",
-    "image": "https://dogescribble.netlify.app/scribbles/nfts/111.png",
+    "image": "https://bafybeiaolwiidonkykyqaaqsrvieiareu7fuhmt3a72xvuogpatqpvrd2u.ipfs.4everland.io/111.png",
     "attribute": [
         {
             "trait_type": "colours",
@@ -9,7 +9,7 @@
         },
         {
             "trait_type": "hat",
-            "value": "cap-wings"
+            "value": "cap-wing"
         },
         {
             "trait_type": "eyes",

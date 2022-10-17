@@ -1,0 +1,31 @@
+{
+    "name": "Scribble",
+    "description": "Scribbles on doge: we say them doodles.:)",
+    "image": "https://bafybeiaolwiidonkykyqaaqsrvieiareu7fuhmt3a72xvuogpatqpvrd2u.ipfs.4everland.io/247.png",
+    "attribute": [
+        {
+            "trait_type": "colours",
+            "value": "simple"
+        },
+        {
+            "trait_type": "hat",
+            "value": "butterfly"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "moneye"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "spiral"
+        },
+        {
+            "trait_type": "t-shirt",
+            "value": "pogie"
+        },
+        {
+          "trait_type": "extra",
+          "value": "backpack"
+        }
+    ]
+}
