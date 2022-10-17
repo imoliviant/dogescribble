@@ -1,5 +1,5 @@
 // Mint
-function mintScribble() {
+function mintScribbles() {
     var amount1 = $("#amount1").val();
     var content = "Sending transaction from: ";
     content += scribbleChef;
