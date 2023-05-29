@@ -36,7 +36,7 @@ function wallet() {
         .then(function (result) {
     var event = contractScribble.methods.tokenURI(Number(result)).call()
         .then(function (result1) {
-    content += "<img src=https://dogescribble.netlify.app/scribbles/nfts/"+result+".png width=64 height=64>" + "<br><br><button id="stakeItNow">Claim: " + result + "</button>";
+    content += "<img src=https://dogescribble.netlify.app/scribbles/nfts/"+result+".png width=64 height=64>" + "<br><br><button id='stakeItNow'>Claim: " + result + "</button>";
     $("#lang3").html(content);
     });
     });
